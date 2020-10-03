@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Company Logo</title>
+		<style>
+                    body{
+                        background-color: rgb(252, 252, 222);
+                    }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        /* @media only screen and (min-width: 768px) {
+
+        } */
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        /* @media only screen and (min-width: 992px) {} */
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        /* @media only screen and (min-width: 1200px) {} */
+
+        /* @media only screen and (orientation: landscape) {
+            body {
+                background-color: lightblue;
+            }
+        } */
+		.login-form {
+			width: 300px;
+			/* margin: 0 auto; */
+            font-family: Tahoma, Geneva, sans-serif;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 16px;
+            width: 300px;
+            /* float: left; */
+            /* margin-top: 5em; */
+		}
+		.login-form h1 {
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+        }
+        .login-form input{
+            border-radius: 6px;
+        }
+		.login-form input[type="password"],
+		.login-form input[type="text"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+        }
+        .container i {
+            margin-left: -30px;
+            cursor: pointer;
+            float: right;
+            position: fixed;
+            margin-top: 18px;
+            z-index: 6;
+        }
+        .fa, .far, .fas {
+            display: inline;
+        }
+		.login-form input[type="submit"] {
+			width: 100%;
+			padding: 8px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+            color: #ffffff;
+            font-size: 16px;
+        }
+        .register{
+            text-align: center;
+            margin: 16px;
+        }
+        .register a:link {
+            color: #393cf5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .register span {
+            font-size: 14px;
+        }
+        @media only screen and (min-width: 768px) {
+            div.login-form {
+                margin-top: 5em;
+            }
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: lightgrey;
+            color: black;
+            text-align: center;
+        }
+        .footer p {
+            font-size: small;
+        }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	</head>
+	<body>
+		<div class="login-form">
+			<h1>Register</h1>
+			<form action="register" method="POST">
+                <input type="text" name="email" placeholder="Email or Phone" autocomplete="email" required>
+                <input type="text" name="firstName" placeholder="First name" required>
+                <input type="text" name="lastName" placeholder="Last name" required>
+                <div class="container">
+                    <input id="password" type="password" name="password" placeholder="Password" autocomplete="current-password" aria-describedby="password-constraints" required>
+                    <i class="far fa-eye fa-eye-slash" id="togglePassword"></i>
+                </div>
+                    <!-- <button id="toggle-password" type="button" aria-label="Show password as plain text. Warning: this will display your password on the screen.">Show password</button> -->
+                    <!-- <div id="password-constraints">Eight or more characters with a mix of letters, numbers and symbols.</div> -->
+                <input class="login" type="submit" value="Sign up">
+                <script>
+                    const togglePassword = document.querySelector('#togglePassword');
+                    const password = document.querySelector('#password');
+        
+                    togglePassword.addEventListener('click', function (e) {
+                        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                        password.setAttribute('type', type);
+                        // toggle the eye slash icon
+                        this.classList.toggle('fa-eye-slash');
+                    });
+                </script>
+            </form>
+            <div class="register">
+                <span>Already have an account?</span>
+                <a href="http://localhost:8080/auth/login">Log in</a>
+            </div>
+            <div class="footer">
+                <h4>Code Ramp</h4>
+                <p>&copy; Copyright 2019-20 </p>
+            </div>
+		</div>
+	</body>
+</html>
