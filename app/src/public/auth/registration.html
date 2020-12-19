@@ -3,11 +3,42 @@
 	<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Company Logo</title>
+		<title>CodeRamp</title>
 		<style>
-                    body{
-                        background-color: rgb(252, 252, 222);
-                    }
+            body{
+                background-color:  #393e46;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            .row::after {
+                content: "";
+                /* clear: both; */
+                display: table;
+            }
+            [class*="image-box"] {
+                float: left;
+                padding: 15px;
+            }
+            [class*="register-form"] {
+                float: left;
+                padding: 15px;
+            }
+            [class*="register-form"] {
+                width: 100%;
+            }
+
+            .image-box {
+                /* background-color: yellow; */
+                padding: 20px;
+                float: left;
+            }
+            .img-box-content{
+                text-align: center;
+                height: 30em;
+                /* background-color: rgb(204, 204, 97); */
+                
+            }
         /* Small devices (portrait tablets and large phones, 600px and up) */
 
 
@@ -27,93 +58,118 @@
                 background-color: lightblue;
             }
         } */
-		.login-form {
-			width: 300px;
-			/* margin: 0 auto; */
-            font-family: Tahoma, Geneva, sans-serif;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            max-width: 300px;
-            margin: 10px auto;
-            padding: 16px;
-            width: 300px;
-            /* float: left; */
-            /* margin-top: 5em; */
-		}
-		.login-form h1 {
-			text-align: center;
-			color: #4d4d4d;
-			font-size: 24px;
-			padding: 20px 0 20px 0;
-        }
-        .login-form input{
-            border-radius: 6px;
-        }
-		.login-form input[type="password"],
-		.login-form input[type="text"] {
-			width: 100%;
-			padding: 15px;
-			border: 1px solid #dddddd;
-			margin-bottom: 15px;
-			box-sizing:border-box;
-        }
-        .container i {
-            margin-left: -30px;
-            cursor: pointer;
-            float: right;
-            position: fixed;
-            margin-top: 18px;
-            z-index: 6;
-        }
-        .fa, .far, .fas {
-            display: inline;
-        }
-		.login-form input[type="submit"] {
-			width: 100%;
-			padding: 8px;
-			background-color: #535b63;
-			border: 0;
-			box-sizing: border-box;
-			cursor: pointer;
-			font-weight: bold;
-            color: #ffffff;
-            font-size: 16px;
-        }
-        .register{
-            text-align: center;
-            margin: 16px;
-        }
-        .register a:link {
-            color: #393cf5;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .register span {
-            font-size: 14px;
-        }
-        @media only screen and (min-width: 768px) {
-            div.login-form {
-                margin-top: 5em;
+            .register-form {
+                width: 300px;
+			    /* margin: 0 auto; */
+                font-family: Tahoma, Geneva, sans-serif;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                max-width: 325px;
+                margin: 10px auto;
+                /* padding: 16px; */
+                width: 300px;
+                float: none;
+                /* margin-top: 5em; */
             }
-        }
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: lightgrey;
-            color: black;
-            text-align: center;
-        }
-        .footer p {
-            font-size: small;
-        }
+
+            @media screen and (max-width: 768px) {
+                div.image-box {
+                    display: none;
+                    margin-top: 0px;
+                }
+            }
+            @media only screen and (min-width: 768px) {
+            /* For desktop: */
+                .image-box {
+                    width: 60%;
+                }
+                .register-form {
+                    width: 40%;
+                    margin-top: 5em;
+                    float: left;
+                    /* margin-left: 100px; */
+                    /* margin: 10px auto; */
+                }
+            }
+            .register-form h1 {
+                text-align: center;
+                color: #4d4d4d;
+                font-size: 28px;
+                padding: 20px 0 20px 0;
+            }
+            .register-form input{
+                border-radius: 6px;
+            }
+            .register-form input[type="password"],
+            .register-form input[type="text"] {
+                width: 100%;
+                padding: 15px;
+                border: 1px solid #dddddd;
+                margin-bottom: 15px;
+                box-sizing:border-box;
+            }
+            .container i {
+                margin-left: -30px;
+                cursor: pointer;
+                float: right;
+                position: fixed;
+                margin-top: 18px;
+                z-index: 6;
+            }
+            .fa, .far, .fas {
+                display: inline;
+            }
+            .register-form input[type="submit"] {
+                width: 100%;
+                padding: 8px;
+                background-color: #535b63;
+                border: 0;
+                box-sizing: border-box;
+                cursor: pointer;
+                font-weight: bold;
+                color: #ffffff;
+                font-size: 16px;
+            }
+            .register{
+                text-align: center;
+                margin: 16px;
+            }
+            .register a:link {
+                color: #393cf5;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .register span {
+                font-size: 14px;
+            }
+            @media only screen and (min-width: 768px) {
+                div.register-form {
+                    margin-top: 5em;
+                }
+            }
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: lightgrey;
+                color: black;
+                text-align: center;
+            }
+            .footer p {
+                font-size: small;
+            }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	</head>
 	<body>
-		<div class="login-form">
+        <div class="image-box">
+            <div class="img-box-content">
+                <img src="/undraw_pair_programming_njlp.svg" alt="welcome" width="600" height="600" style="vertical-align:middle">
+            </div>
+        </div>
+		<div class="register-form">
 			<h1>Register</h1>
 			<form action="register" method="POST">
                 <input type="text" name="email" placeholder="Email or Phone" autocomplete="email" required>
@@ -140,11 +196,11 @@
             </form>
             <div class="register">
                 <span>Already have an account?</span>
-                <a href="http://localhost:3000/auth/login">Log in</a>
+                <a href="../auth/login">Log in</a>
             </div>
             <div class="footer">
-                <h4>Code Ramp</h4>
-                <p>&copy; Copyright 2019-20 </p>
+                <!-- <h4>Code Ramp</h4> -->
+                <p>CodeRamp | &copy; Copyright 2019-20 </p>
             </div>
 		</div>
 	</body>

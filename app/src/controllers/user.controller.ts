@@ -1,7 +1,7 @@
 import { Router, Request, Response, NextFunction } from 'express';
-import NotAuthorizedException from '../exceptions/notAuthorized.exception';
+// import NotAuthorizedException from '../exceptions/notAuthorized.exception';
 import Controller from '../interfaces/controller.interface';
-import RequestWithUser from '../interfaces/requestwithuser.interface';
+// import RequestWithUser from '../interfaces/requestwithuser.interface';
 import authMiddleware from '../middlewares/auth.middleware';
 import userModel from '../models/user.model';
 import UserNotFoundException from '../exceptions/userNotFound.exception';

@@ -3,10 +3,10 @@
 	<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Company Logo</title>
+		<title>CodeRamp</title>
 		<style>
         body{
-            background-color: rgb(252, 252, 222);
+            background-color: #393e46;
         }
         * {
             box-sizing: border-box;
@@ -66,7 +66,7 @@
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            max-width: 300px;
+            max-width: 325px;
             margin: 10px auto;
             /* padding: 16px; */
             width: 300px;
@@ -96,7 +96,7 @@
 		.login-form h1 {
 			text-align: center;
 			color: #4d4d4d;
-			font-size: 24px;
+			font-size: 28px;
 			padding: 20px 0 20px 0;
         }
         .login-form input{
@@ -171,7 +171,7 @@
 	<body>
         <div class="image-box">
             <div class="img-box-content">
-                <img src="/php-login-and-authentication-the-definitive-guide.png" alt="welcome" width="600" height="600" style="vertical-align:middle">
+                <img src="/login-img.svg" alt="welcome" width="750" height="700" style="vertical-align:middle">
             </div>
         </div>
 		<div class="login-form">
@@ -185,7 +185,7 @@
                     <!-- <button id="toggle-password" type="button" aria-label="Show password as plain text. Warning: this will display your password on the screen.">Show password</button> -->
                     <!-- <div id="password-constraints">Eight or more characters with a mix of letters, numbers and symbols.</div> -->
                 <div class="forgot-password">
-                    <a href="http://localhost:3000/auth/register">Forgot Password?</a>
+                    <a href="../auth/register">Forgot Password?</a>
                 </div>
                 <input class="login" type="submit" value="Login">
                 <script>
@@ -202,12 +202,19 @@
             </form>
             <div class="register">
                 <span>Don't have an account?</span>
-                <a href="http://localhost:3000/auth/register">Register</a>
+                <a href="../auth/register">Register</a>
             </div>
             <div class="footer">
-                <h4>Code Ramp</h4>
-                <p>&copy; Copyright 2019-20 </p>
+                <!-- <h4>Code Ramp</h4> -->
+                <p>CodeRamp | &copy; Copyright 2019-20 </p>
             </div>
 		</div>
 	</body>
 </html>
+<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    $("#goToRegister").on('click',function()
+    {
+        alert("hey!");
+        // document.location.href = 'http://localhost:3000/auth/register';
+    });
+</script> -->
